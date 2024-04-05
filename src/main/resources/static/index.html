@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+    <title>Sunbase Assignment</title>
+</head>
+<body>
+    <div id="login-container">
+        <h2>Login</h2>
+        <label for="username-input">Username:&nbsp;&nbsp;&nbsp;</label>
+        <input type="text" name="username" id="username-input" placeholder="Your username"> <br><br>
+        <label for="password-input">Password:&nbsp;&nbsp;&nbsp;&nbsp;</label>
+        <input type="password" name="password" id="password-input" placeholder="Your password"> <br><br>
+
+        <div id="warning-message" class="hide"></div><br><br>
+
+        <button type="submit" id="login-btn">Login</button>
+    </div>
+
+    <br><br>
+
+    <div id="data-container" class="hide">
+        <h2>Customer List</h2>
+        <div id="function-area">
+            <button id="add-customer-btn" class="btn">Add Customer +</button>
+            <select name="search-by-dropdown" id="search-by-dropdown" class="btn">
+                <option value="" disabled selected hidden>Search By</option>
+                <option value="first-name">First Name</option>
+                <option value="city">City</option>
+                <option value="email">Email</option>
+                <option value="phone">Phone</option>
+            </select>
+            <div id="search-area">
+                <input type="text" name="search-bar" id="search-bar" placeholder="Search query">
+                <i id="search-icon" class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <button id="sync-btn" class="btn">Sync</button>
+
+        </div>
+        <div id="message-on-data-container" class="hide"></div>
+
+
+        <table id="data-area-table">
+            <thead>
+                <tr id="table-heading">
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                    <td>Address</td>
+                    <td>City</td>
+                    <td>State</td>
+                    <td>Email</td>
+                    <td>Phone</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+                <tr>
+                    <td>Salik</td>
+                    <td>Anwar</td>
+                    <td>Azad Park</td>
+                    <td>Varanasi</td>
+                    <td>UP</td>
+                    <td>salikanwarright@gmail.com</td>
+                    <td>8738986867</td>
+                    <td>
+                        <i class="fa-solid fa-circle-minus"></i>
+                        <i class="fa-solid fa-pen"></i>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div id="edit-customer" class="hide">
+        <form id="edit-form">
+            <input type="text" id="first-name-edit" placeholder="First Name">
+            <input type="text" id="last-name-edit" placeholder="Last Name">
+            <input type="text" id="address-edit" placeholder="Address">
+            <input type="text" id="city-edit" placeholder="City">
+            <input type="text" id="state-edit" placeholder="State">
+            <input type="text" id="email-edit" placeholder="Email">
+            <input type="text" id="phone-edit" placeholder="Phone">
+        </form>
+
+        <button id="edit-form-submit-btn" class="btn">Save</button>
+        <button id="edit-form-close-btn" class="btn">Close</button>
+    </div>
+
+    <div id="add-cust" class="hide">
+        <div id="add-new-customer-container">
+            <h2>Customer Details</h2>
+            <form id="add-customer-form">
+                <div class="sect">
+                    <input type="text" name="first-name" id="first-name" placeholder="First Name">
+                    <input type="text" name="last-name" id="last-name" placeholder="Last Name">
+                </div>
+                <div class="sect">
+                    <input type="text" name="street" id="street" placeholder="Street">
+                    <input type="text" name="address" id="address" placeholder="Address">
+                </div>
+                <div class="sect">
+                    <input type="text" name="city" id="city" placeholder="City">
+                    <input type="text" name="state" id="state" placeholder="State">
+                </div>
+                <div class="sect">
+                    <input type="email" name="email" id="email" placeholder="Email">
+                    <input type="tel" name="phone-number" id="phone-number" placeholder="Phone">
+                </div>
+                
+                <div id="message" class="hide"></div>
+                
+                <button type="submit" class="btn" id="form-submit-btn">Submit</button>
+                <button class="btn" id="form-close-btn">Close</button>
+            </form>
+        </div>
+    </div>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>
