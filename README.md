@@ -11,5 +11,8 @@
 - 2nd, configure the database settings in the Application.properties file. Just replace the data source username and password with your MySQL username and password.
 - 3rd, Keep your port running on 8080.
 - Once all these set-ups have been made and the app is up and running, access the client side on http://localhost:8080/index.html
+- Since the app lets the user log in only after providing the correct credentials, here are the credentials;
+-         login-id/username: test@sunbasedata.com
+-         password: Test@123
 
 Happy coding.
